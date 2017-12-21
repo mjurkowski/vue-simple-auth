@@ -11,11 +11,11 @@
   export default {
     name: 'auth',
     mounted() {
-      auth.authForm()
+      auth.authForm('#firebaseui-auth-container')
     }
   }
 </script>
 
-<style scoped>
-
+<style>
+  @import "../../node_modules/firebaseui/dist/firebaseui.css";
 </style>

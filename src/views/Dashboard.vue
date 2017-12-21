@@ -1,13 +1,11 @@
 <template>
   <div v-if="user">
     <h1>Hello USER!</h1>
-    <button @click="logOut">Log out</button>
-    <hr>
-    <img :src="user.photoURL" style="height: 120px"> <br>
-    <p>{{user.displayName}}</p>
+    <img :src="user.photoURL" width="100"> <br>
+    <h3>{{user.displayName}}</h3>
     <p>{{user.email}}</p>
-    <p>{{user.uid}}</p>
-    <hr>
+    <button @click="logOut">Log out</button>
+    <br><br><br>
     <pre>{{user}}</pre>
   </div>
 </template>
@@ -31,5 +29,19 @@
 </script>
 
 <style scoped>
+  img {
+    border-radius: 50px;
+  }
 
+  h3 {
+    margin-bottom: 0;
+  }
+
+  p {
+    margin-top: 0;
+  }
+
+  pre {
+    text-align: left;
+  }
 </style>
